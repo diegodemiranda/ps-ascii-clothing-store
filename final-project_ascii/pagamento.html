@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Flor de Sal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt="logotipo" ></a>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="pagamento">
+        <h2>Método de Pagamento</h2>
+        <form action="entrega.html" method="post">
+            <div class="metodo-pagamento">
+                <input type="radio" id="cartao" name="pagamento" value="cartao" checked>
+                <label for="cartao">Cartão de Crédito</label><br>
+                <input type="radio" id="pix" name="pagamento" value="pix">
+                <label for="pix">Pix</label><br>
+                <input type="radio" id="boleto" name="pagamento" value="boleto">
+                <label for="boleto">Boleto</label>
+            </div>
+            <div class="detalhes-pagamento">
+                <label for="numero-cartao"><strong>Número do Cartão:</strong></label>
+                <input type="text" id="numero-cartao" name="numero-cartao" inputmode="numeric" pattern="\d{16}"
+                        maxlength="19" placeholder="1234-5678-9123-4567" required>
+                <div>
+                <label for="validade"><strong>(MM/AAAA):</strong>
+                <input type="text" id="validade" name="validade" pattern="(0[1-9]|1[0-2])\/(202[0-9]|2030)"
+                        placeholder="MM/AAAA" required>
+                </div>
+                <div>
+                <label for="cvv"><strong>CVV:</strong></label>
+                <input type="text" id="cvv" name="cvv" inputmode="numeric" maxlength="4" placeholder="123" required>
+                </div>
+                <div>
+                <label for="nome-titular"><strong>Nome do Titular:</strong></label>
+                <input type="text" id="nome-titular" name="nome-titular" pattern="[A-Za-z ]+"
+                        placeholder="Nome Completo" required>
+                </div>
+            </div>
+            <button type="submit" class="btn">Continuar para Entrega</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Flor de Sal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
